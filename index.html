@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Typing Game</title>
+</head>
+<body>
+    <main class="typed">
+        <div class="typed__mask" id="typed-mask">
+            <h1>Speed Typing game</h1>
+            <p>Practique sus habilidades de tipeo con este texto de ejmplo de Sherlock Holmes. Haga Click en **inicio** para
+                empezar!</p>
+            <div class="typed__actions">
+                <button type="button" class="typed__actions-btn" id="start">Inicio</button>
+                <!-- Botón para iniciar el juego -->
+                <!-- el componente textbox para ingresar el texto -->
+            </div>
+        </div>
+        <div class="typed__content">
+            <h2>Escribe lo siguiente</h2>
+            <p class="typed__content-quote" id="quote"></p> <!-- En este bloque mostramos el texto de ejemplo -->
+            <p id="message"></p> <!-- En este bloque mostramos los mensajes del juego -->
+            <input type="text" class="typed__content-input" aria-label="palabra actual" id="typed-value"
+                placeholder="Escribe aqui" />
+        </div>
+    </main>
+    <div class="modal" id="modal">
+        <div class="modal__content">
+            <span class="modal__emoji">🥳</span>
+            <h4 class="modal__title" id="modal-title">Felicitaciones!!!</h4>
+            <p class="modal__legend" id="modal-legend"></p>
+            <button type="button" class="typed__actions-btn" id="restart">Volver a escribir</button>
+        </div>
+    </div>
+    <span class="menu-btn" id="menu-btn">Menu</span>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar__content" id="sidebar-content">
+            <div class="sidebar__content-header">
+                <h3>Historial</h3>
+                <span id="sidebar-close">Cerrar</span>
+            </div>
+            <div class="sidebar__content-body">
+                <div>
+                    <h4>Ultimo tipeo</h4>
+                    <p id="empty-message" class="empty-message"></p>
+                    <span id="last-time" class="last-time"></span>
+                    <p id="last-quote" class="last-quote"></p>
+                </div>
+                <div>
+                    <h5>Desarrollado por</h5>
+                    <a target="_blank" class="sidebar__content-link" href="https://github.com/xjdevx/speedtyping">Juan Rodriguez</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
